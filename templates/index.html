@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Outdoor - Trouvez votre parcours idéal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="app-container">
+                    <!-- Logo -->
+                    <img src="{{ url_for('static', filename='assets/logo_sport_outdoor_langueux.png') }}" alt="Sport Outdoor Langueux" class="circular-logo">
+
+                    <!-- Welcome Screen -->
+                    <div class="screen" id="welcome-screen">
+                        <h1>Bienvenue chez Sport Outdoor</h1>
+                        <p>Prêt à vivre une aventure unique ? Découvrez votre parcours sur-mesure et partez à l'aventure en toute confiance.</p>
+                        <button class="btn btn-primary btn-lg" onclick="startQuestionnaire()">Commencer l'aventure</button>
+                    </div>
+
+                    <!-- Questionnaire Form -->
+                    <form id="trail-form" class="screen hidden" method="POST" action="{{ url_for('submit') }}">
+                        <div class="question-container" id="location">
+                            <h2>Où souhaitez-vous explorer ?</h2>
+                            <select name="location" class="form-select" required>
+                                <option value="">Choisissez une localisation</option>
+                                <option value="langueux">Langueux</option>
+                                <option value="saint-brieuc">Saint-Brieuc</option>
+                                <option value="plerin">Plérin</option>
+                            </select>
+                        </div>
+
+                        <div class="question-container hidden" id="activity">
+                            <h2>Quel type d'activité ?</h2>
+                            <select name="activity" class="form-select" required>
+                                <option value="">Choisissez une activité</option>
+                                <option value="running">Course à pied</option>
+                                <option value="trail">Trail</option>
+                                <option value="hiking">Randonnée</option>
+                            </select>
+                        </div>
+
+                        <div class="question-container hidden" id="difficulty">
+                            <h2>Quel niveau de difficulté ?</h2>
+                            <select name="difficulty" class="form-select" required>
+                                <option value="">Choisissez un niveau</option>
+                                <option value="easy">Facile</option>
+                                <option value="medium">Moyen</option>
+                                <option value="difficult">Difficile</option>
+                            </select>
+                        </div>
+
+                        <div class="question-container hidden" id="distance">
+                            <h2>Quelle distance souhaitez-vous parcourir ?</h2>
+                            <select name="distance" class="form-select" required>
+                                <option value="">Choisissez une distance</option>
+                                <option value="5">5 km</option>
+                                <option value="10">10 km</option>
+                                <option value="15">15 km</option>
+                                <option value="20">20 km</option>
+                            </select>
+                        </div>
+                        
+                        <div class="question-container hidden" id="landscape">
+                            <h2>Quel paysage préférez-vous ?</h2>
+                            <select name="landscape" class="form-select" required>
+                                <option value="">Choisissez un paysage</option>
+                                <option value="ville">Ville</option>
+                                <option value="montagne">Montagne</option>
+                                <option value="bord-de-mer">Bord de mer</option>
+                                <option value="campagne">Campagne</option>
+                                <option value="foret">Forêt</option>
+                            </select>
+                        </div>
+
+                        <div class="question-container hidden" id="email">
+                            <h2>Où souhaitez-vous recevoir votre parcours ?</h2>
+                            <input type="email" name="email" class="form-control" placeholder="Votre email" required>
+                            <small class="form-text text-muted">Nous vous enverrons le fichier GPX et un code promo exclusif !</small>
+                        </div>
+
+                        <div class="navigation-buttons">
+                            <button type="button" class="btn btn-secondary" onclick="previousQuestion()">Précédent</button>
+                            <button type="button" class="btn btn-primary" id="next-btn" onclick="nextQuestion()">Suivant</button>
+                            <button type="submit" class="btn btn-success hidden" id="submit-btn">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/form_handler.js') }}"></script>
+</body>
+</html>

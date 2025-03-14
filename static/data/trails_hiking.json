@@ -1,0 +1,22 @@
+{
+    "trails": [
+        {
+            "trail_name": "Randonnée Forêt Langueux",
+            "distance": 7,
+            "difficulty_level": "easy",
+            "location": "langueux",
+            "activity": "hiking",
+            "gpx_file_path": "trails/foret_langueux.gpx",
+            "description": "Une belle randonnée en forêt, idéale pour les débutants"
+        },
+        {
+            "trail_name": "Grande Randonnée Saint-Brieuc",
+            "distance": 15,
+            "difficulty_level": "medium",
+            "location": "saint-brieuc",
+            "activity": "hiking",
+            "gpx_file_path": "trails/saint_brieuc_gr.gpx",
+            "description": "Une randonnée complète entre ville et nature"
+        }
+    ]
+}

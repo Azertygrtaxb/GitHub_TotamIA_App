@@ -1,0 +1,49 @@
+{
+    "trails": [
+        {
+            "trail_name": "Randonnée Forêt Langueux",
+            "distance": 7,
+            "difficulty_level": "easy",
+            "location": "langueux",
+            "activity": "hiking",
+            "gpx_file_path": "trails/foret_langueux.gpx",
+            "description": "Une belle randonnée en forêt, idéale pour les débutants"
+        },
+        {
+            "trail_name": "Trail des Collines",
+            "distance": 12,
+            "difficulty_level": "difficult",
+            "location": "langueux",
+            "activity": "trail",
+            "gpx_file_path": "trails/collines.gpx",
+            "description": "Un parcours technique avec de beaux dénivelés"
+        },
+        {
+            "trail_name": "Circuit Côtier Plérin",
+            "distance": 10,
+            "difficulty_level": "medium",
+            "location": "plerin",
+            "activity": "running",
+            "gpx_file_path": "trails/plerin_cotier.gpx",
+            "description": "Un parcours côtier avec vue sur mer"
+        },
+        {
+            "trail_name": "Grande Randonnée Saint-Brieuc",
+            "distance": 15,
+            "difficulty_level": "medium",
+            "location": "saint-brieuc",
+            "activity": "hiking",
+            "gpx_file_path": "trails/saint_brieuc_gr.gpx",
+            "description": "Une randonnée complète entre ville et nature"
+        },
+        {
+            "trail_name": "Plérin Trail Run",
+            "distance": 8,
+            "difficulty_level": "medium",
+            "location": "plerin",
+            "activity": "trail",
+            "gpx_file_path": "trails/plerin_trail_run.gpx",
+            "description": "Un parcours dynamique dans Plérin, idéal pour le trail running"
+        }
+    ]
+}

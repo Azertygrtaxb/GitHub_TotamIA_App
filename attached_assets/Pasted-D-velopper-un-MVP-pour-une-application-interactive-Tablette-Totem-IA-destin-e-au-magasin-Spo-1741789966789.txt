@@ -1,0 +1,150 @@
+Développer un **MVP pour une application interactive "Tablette Totem IA"** destinée au magasin **Sport Outdoor**. L'application doit offrir une **expérience immersive et moderne**, renforcer l'image d'innovation du magasin, et rester fidèle à son ADN sportif.
+
+---
+
+### 🛠️ **Stack Technique**
+
+- **Front-End** : HTML, CSS, JavaScript (avec animations modernes et fluides).
+- **Back-End** : Python (Flask) ou Node.js.
+- **Base de Données** : Format JSON pour stocker les données des parcours.
+- **Envoi d'Emails** : Intégration de l'API Gmail pour l'envoi automatique des fichiers GPX.
+- **Plateforme** : Replit Core.
+
+---
+
+### 🎨 **Design & Expérience Utilisateur (UX/UI)**
+
+1. **Identité Visuelle** :
+    
+    - L'application doit reprendre les **couleurs du logo** :
+        - **Vert turquoise** (comme le fond du logo).
+        - **Brun foncé** (comme le mot "OUTDOOR").
+        - Utiliser des **tons blancs** pour le texte et quelques éléments lumineux.
+    - Le style doit être **moderne, sportif et technologique**, mais avec une **touche naturelle** pour refléter l'univers du trail et de la randonnée.
+    - Design **épuré mais dynamique**, avec des formes rondes et des lignes fluides.
+2. **Assistant IA Visuel** :
+    
+    - L'IA sera représentée par une **sphère dynamique** :
+        - **Couleur principale : Vert turquoise** avec des effets lumineux en brun foncé.
+        - La sphère doit **pulsater et émettre des ondes lumineuses** lorsqu'elle réfléchit ou répond.
+        - Lors de l'envoi de l'email, la sphère pourrait faire une **animation subtile de transfert**, représentant le processus d'envoi.
+    - Le style doit rappeler l'univers du sport outdoor, tout en conservant une image high-tech.
+3. **Interface Utilisateur** :
+    
+    - Interface **simple, fluide et intuitive**, optimisée pour un usage sur tablette.
+    - Transitions **doux et modernes** entre les écrans/questions.
+    - Utilisation de **boutons arrondis et interactifs**, en turquoise et brun foncé, avec des effets de survol.
+    - Animation subtile et dynamique sur les boutons et les zones d'interaction.
+4. **Flux Utilisateur** :
+    
+    - L'utilisateur est accueilli avec une introduction immersive :
+        
+        > "Bienvenue chez **Sport Outdoor**, prêt à vivre une aventure unique ? Découvrez votre parcours sur-mesure et partez à l'aventure en toute confiance."
+        
+    - L'IA pose une série de questions interactives :
+        - Niveau de difficulté souhaité.
+        - Distance préférée.
+        - Type de parcours recherché.
+        - Email pour l'envoi du fichier GPX.
+
+---
+
+### ⚙️ **Fonctionnalités Clés**
+
+1. **Collecte et Gestion des Données** :
+    
+    - Créer une **base de données JSON** structurée avec les informations suivantes :
+    
+    ```json
+    {
+        "trails": [
+            {
+                "trail_name": "Randonnée Forêt Langueux",
+                "distance": 7,
+                "difficulty_level": "Facile",
+                "location": "Langueux",
+                "gpx_file_path": "trails/foret_langueux.gpx"
+            },
+            {
+                "trail_name": "Trail des Collines",
+                "distance": 12,
+                "difficulty_level": "Difficile",
+                "location": "Collines de Langueux",
+                "gpx_file_path": "trails/collines.gpx"
+            }
+        ]
+    }
+    ```
+    
+2. **Logique de l'IA** :
+    
+    - L'IA doit :
+        - **Collecter les préférences utilisateurs**.
+        - **Analyser les données JSON** pour trouver le parcours le plus adapté.
+        - Sélectionner le **fichier GPX correspondant**.
+        - Proposer une alternative si aucun parcours exact n'est trouvé.
+3. **Automatisation de l'Envoi d'Emails** :
+    
+    - Utiliser l'**API Gmail** pour envoyer automatiquement l'email.
+    - Contenu de l'email :
+        - Objet : "_Votre parcours personnalisé Sport Outdoor vous attend !_"
+        - Message personnalisé, en cohérence avec l'ADN du magasin.
+        - Fichier GPX en **pièce jointe**.
+        - Logo du magasin en en-tête.
+        - Possibilité d'inclure un **code de réduction** pour le prochain achat.
+4. **Feedback Utilisateur** :
+    
+    - Après l'envoi de l'email, afficher un message de confirmation :
+        
+        > "Votre parcours a été envoyé avec succès ! Rendez-vous sur les sentiers et n'oubliez pas de revenir nous raconter votre aventure."
+        
+    - La sphère IA peut alors afficher une animation de "mission accomplie".
+
+---
+
+### 🧩 **Lien Critique entre Base de Données, GPX et Email**
+
+- Le **processus logique** doit être clair et robuste :
+    
+    1. **Collecte des préférences** (niveau, distance, type, email).
+    2. **Analyse et sélection du parcours** dans le **fichier JSON**.
+    3. **Récupération du fichier GPX** correspondant.
+    4. **Génération de l'email** avec le fichier attaché.
+    5. **Envoi automatique via l'API Gmail**.
+    6. **Retour visuel et textuel** pour confirmer l'envoi réussi.
+- **Gestion des erreurs** :
+    
+    - Si l'email est invalide, afficher un message clair.
+    - Si le fichier GPX est manquant, proposer une alternative.
+
+---
+
+### 🚨 **Points Supplémentaires**
+
+- L'application doit fonctionner **hors-ligne**, sauf pour l'envoi d'emails.
+- Assurer la **sécurité des données utilisateurs**, notamment des adresses emails.
+- Optimiser l'application pour une **utilisation fluide sur tablette**.
+
+---
+
+### 📚 **Qualité du Code**
+
+- Code **modulaire et propre**, avec des **commentaires explicites**.
+- Séparer clairement le traitement des données, l'affichage et l'envoi d'emails.
+- Prévoir la **scalabilité** (ajout de parcours, nouvelles fonctionnalités futures).
+
+---
+
+### 🎨 **Détails Visuels Avancés**
+
+- Boutons et champs de saisie avec des **effets de survol** subtils.
+- Transitions douces et animations modernes.
+- L'animation de la sphère IA doit représenter la **fluidité et l'énergie du sport**, tout en ayant un aspect **technologique et dynamique**.
+
+---
+
+**⚠️ RAPPEL :** Ce projet est un **MVP**, donc priorisez les fonctionnalités suivantes :
+
+1. Collecte des préférences utilisateur.
+2. Sélection et envoi des parcours GPX.
+3. Design cohérent avec le logo et l'image de marque de **Sport Outdoor**.

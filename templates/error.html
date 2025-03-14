@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Outdoor - Parcours non trouvé</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="error-container text-center">
+                    <img src="{{ url_for('static', filename='assets/logo_sport_outdoor_langueux.png') }}" alt="Sport Outdoor Langueux" class="circular-logo">
+                    <h1>Désolé !</h1>
+                    <p>Nous n'avons pas trouvé de parcours correspondant exactement à vos critères pour le moment.</p>
+                    <div class="promo-box mt-4 mb-4">
+                        <h3>🎉 Bonne nouvelle !</h3>
+                        <p>Pour vous remercier de votre intérêt, nous vous avons envoyé par email un code de réduction de <strong>10%</strong> sur votre prochain achat en magasin !</p>
+                        <p class="promo-code">Code promo : <strong>{{ discount_code }}</strong></p>
+                        <small>Le code a également été envoyé à votre adresse email.</small>
+                    </div>
+                    <p>Notre équipe travaille constamment à l'ajout de nouveaux parcours. Revenez nous voir bientôt !</p>
+                    <a href="/" class="btn btn-primary mt-3">Essayer d'autres critères</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

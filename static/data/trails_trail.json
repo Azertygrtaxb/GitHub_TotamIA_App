@@ -1,0 +1,22 @@
+{
+    "trails": [
+        {
+            "trail_name": "Trail des Collines",
+            "distance": 12,
+            "difficulty_level": "difficult",
+            "location": "langueux",
+            "activity": "trail",
+            "gpx_file_path": "trails/collines.gpx",
+            "description": "Un parcours technique avec de beaux dénivelés"
+        },
+        {
+            "trail_name": "Plérin Trail Run",
+            "distance": 8,
+            "difficulty_level": "medium",
+            "location": "plerin",
+            "activity": "trail",
+            "gpx_file_path": "trails/plerin_trail_run.gpx",
+            "description": "Un parcours dynamique dans Plérin, idéal pour le trail running"
+        }
+    ]
+}

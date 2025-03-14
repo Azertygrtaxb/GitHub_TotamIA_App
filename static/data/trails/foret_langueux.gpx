@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Sport Outdoor">
+  <metadata>
+    <name>Randonnée Forêt Langueux</name>
+    <desc>Une belle randonnée en forêt, idéale pour les débutants</desc>
+  </metadata>
+  <trk>
+    <name>Randonnée Forêt Langueux</name>
+    <trkseg>
+      <trkpt lat="48.5" lon="-2.7">
+        <ele>50</ele>
+      </trkpt>
+      <trkpt lat="48.51" lon="-2.71">
+        <ele>55</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

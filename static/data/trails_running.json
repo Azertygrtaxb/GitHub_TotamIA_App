@@ -1,0 +1,13 @@
+{
+    "trails": [
+        {
+            "trail_name": "Circuit Côtier Plérin",
+            "distance": 10,
+            "difficulty_level": "medium",
+            "location": "plerin",
+            "activity": "running",
+            "gpx_file_path": "trails/plerin_cotier.gpx",
+            "description": "Un parcours côtier avec vue sur mer"
+        }
+    ]
+}
